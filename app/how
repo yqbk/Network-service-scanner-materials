@@ -1,0 +1,186 @@
+sudo python2.7 ex2.py 
+ls
+clear
+cd Dropbox/agh/Internet\ Security/ex2/
+ping onet.pl
+su
+ssh jsyrek@student.agh.edu.pl
+telnet onet.pl 80
+telnet onet.pl
+nc -v -z -w 3 stackoverflow.com 80
+netcat onet.pl 80
+cd ..
+[1;5A
+sudo python2.7 setup.py install
+cd dpkt-1.8.6.2/
+man pcap
+cd pip-7.1.2/
+[1;7D
+sudo python2.7 ./sniff.py tun0 "port 80"
+sudo python2.7 ./sniff.py wlp1s0 "port 80"
+sudo python2.7 ./sniff.py ip link show"port 80"
+ip link show
+sudo python2.7 ./sniff.py "port 80"
+sudo python2.7 ./sniff.py wlan0 "port 80"
+sudo ./sniff.py wlan0 "port 80"
+atom sniff.py 
+python2.7 sniff.py wlan0 tcp port 80 
+python2.7 sniff.py eth0 tcp port 80 
+./sniff.py eth0 tcp port 80 
+cd examples/
+cd build/
+python2.7 setup.py install
+cd ~/Downloads/pylibpcap-0.6.4/
+setfont droid_sans
+sudo dpkg-reconfigure console-setup
+sudo spkg-reconfigure console-setup
+i3
+font
+sudo xfont 
+xfont 
+sudo pacman -S i3bar
+atom ~/.i3/config
+atom ~/.conkyrc 
+sudo pacman -S conky
+sudo pacman -S conky-i3bar
+chromium
+sudo rm ~/.i3/config
+exec i3
+i3-config-wizard
+xfontsel
+font pango:Droid Sans Mono 10
+dolphin 
+vim TwoButtons.java 
+cd Dropbox/agh/Software\ Engineering/workspace/ex2/src/ex2/
+lynx google.pl
+nano TwoButtons.java 
+cleara
+vim ewa 
+sudo pacman -S texlive-most
+sudo pacman -S texlive
+sudo pacman -S pdflatex
+sudo pacman -S asciijump
+pacman -S asciijump
+ascii a
+ascii 
+ascii
+sudo pacman -S ascii
+yaourt asciijump
+tree
+tree -h ~
+tree -hf ~
+tree ~
+sudo pacman -S tree
+sudo pacman -
+htop
+sudo pacman -Syu
+sudo pacman -Sy
+sudo pacman -Syy
+lynx google.com
+sudo pacman -S lynx
+sudo pacman -S lyx
+nano pingwin
+clera
+sudo pacman -S i3lock i3status
+sudo pacman -S i3-wm
+clean
+cear
+awk '{if ($6!="\"GET") print $6}' sample.log 
+awk '{if ($6!="\"GET") print $1}' sample.log | sort | uniq -c | sort -nr 
+c
+awk '{if ($6=="\"GET") print $1}' sample.log | sort | uniq -c | sort 
+-nr | head -n 5
+awk '{if ($6=="\"GET") print $1}' sample.log | sort | uniq -c | sort
+python2.7 ex3.py 
+bash
+time python2.7 ex2.py 
+python2.7 ex2.py | wc -l
+cd agh/Internet\ Security/ex1/
+cd Dropbox/
+python2.7 ex2.py 
+cd ex1/
+sed -e 's/\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\).*$/\1/' sample.log | sort | uniq | wc -l
+sed -e -e t -e d 's/\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\).*$/\1/'  sample.log | sort | uniq 
+e t -e d
+man sed
+sed -e 's/\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\).*$/\1/' -e t -e d sample.log | sort | uniq | wc -l
+sed -r -e 's/\^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/\1/' -e t -e d sample.log | sort | uniq | wc -l
+awk '{print $1}' sample.log | sort | uniq |wc -l
+awk '{print $1}' sample.log | sort | uniq 
+cd Dropbox/agh/Internet\ Security/
+ping google.de
+vim questionnaire
+cat questionnaire 
+vim ip.py
+git clone https://github.com/Haron-Prime/Antares.git
+vim
+python2.7 ip.py 
+cat sample.log  > sample3.log 
+cat sample.log | wc -l
+cat sample.log | head -n 40000 > sample3.log 
+cat sample.log | head -n 30000 > sample3.log 
+cat sample.log | head -n 20000 > sample3.log 
+cat sample.log | head -n 100000 > sample3.log 
+cat sample.log | head -n 10000 > sample3.log 
+cat sample.log | head -n 1000 > sample3.log 
+cat sample.log | head -n 1000 > sample2.log 
+yaourt atom-editor
+ps
+jobs
+cat sample.log | grep -E "/\b(?:\d{1,3}\.){3}\d{1,3}\b/"
+cat sample.log | grep "/\b(?:\d{1,3}\.){3}\d{1,3}\b/"
+sudo systemctl stop laptop-mode.service
+kdemv5 
+sudo pacman -R atom-editor-git 
+sudo pacman -R atom-editor
+cd..
+cd /run/mount/
+reboo
+sudo curl http://j.mp/spf13-vim3 -L -o - | sh
+cim
+ljfBF;JWEBFLJlfjbLCJB/LJCB/Eljcb/elJBCE/LJBC/EJbclejbc/LJBC/LJWECB/LJBEc/ljBC/LJBEC/LJbc/lejwcbl/jBC/LBWEL/CB////////WECBJLb/ceBJL/cbelb/WELJC/B//Cewlcjb/WLCJB/WELjcb/LWEJCB/WLEcjb/WELCJB/l
+gpg --gen-key
+ping -c 10 onet.pl
+curl http://j.mp/spf13-vim3 -L -o - | sh
+octopi
+sudo pacman -Suy
+ping google.com
+PING ONET.PL
+atom
+sudo yaourt atom-editor
+sudo yaurt atom-editor
+sudo dd if=kali-linux-2.0-amd64.iso of=/dev/sdd bs=512k
+cd /run/media/jaqbek/BLUE/
+sudo fdisk -l
+if not functions -q fish_prompt_mc;functions -c fish_prompt fish_prompt_mc; end;function fish_prompt; echo $PWD>&8; fish_prompt_mc; kill -STOP %self; end
+mc
+time
+hg
+mercurial
+funcsave vpn
+exit
+vpn
+cd agh/
+function vpn
+echo -n kropka12 | openconnect -u syrek@wohnheim-wlan --passwd-on-stdin whvpn.uni-potsdam.de
+end
+fish_config 
+screenfetch 
+sudo pacman -S htop
+sudo pacman -S atom-editor
+hallo
+sudo pacman -S fluxgui 
+sudo pacman -S fluxgui
+dropbox
+sudo octopi
+sudo pacman -S samsung-tool
+sudo pacman -S samsung-tools
+sudo pacman -S redshift
+sudo pacman -S dropbox
+sudo shutdown now
+sudo pacman -S fish
+sudo cp -r /run/media/jaqbek/Data/Jakub/ /run/media/jaqbek/Windows/DANE/sobota/
+man ping
+sudo reboot now
+sudo echo -n kropka12 | openconnect -u syrek@wohnheim-wlan --passwd-on-stdin whvpn.uni-potsdam.de
+echo -n kropka12 | openconnect -u syrek@wohnheim-wlan --passwd-on-stdin whvpn.uni-potsdam.de

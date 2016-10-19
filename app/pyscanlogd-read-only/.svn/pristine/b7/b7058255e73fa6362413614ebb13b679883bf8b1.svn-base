@@ -1,0 +1,11 @@
+README
+entry.py
+scanlogger.py
+setup.py
+timerlist.py
+pyscanlogd.egg-info/PKG-INFO
+pyscanlogd.egg-info/SOURCES.txt
+pyscanlogd.egg-info/dependency_links.txt
+pyscanlogd.egg-info/entry_points.txt
+pyscanlogd.egg-info/not-zip-safe
+pyscanlogd.egg-info/top_level.txt

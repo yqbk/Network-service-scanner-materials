@@ -1,0 +1,21 @@
+Metadata-Version: 1.0
+Name: pyscanlogd
+Version: 0.1
+Summary: Pyscanlogd is a port scan detection tool written in Python
+Home-page: http://code.google.com/p/pyscanlogd
+Author: pythonhacker
+Author-email: python.thehacker@gmail.com
+License: GPL
+Description: Pyscanlogd is a port scan detection tool written in pure Python. It can
+        detect most fast port scans and even can detect port-scans of longer
+        duration upto an hour. It can run as a daemon as well as in the foreground.
+        
+Keywords: networking security python reconnaissance scanning tools
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Desktop Environment
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: GNU GPLv3 License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
