@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.10.10)  19 OCT 2016 21:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.10.10)  21 OCT 2016 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -535,7 +535,11 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 12.
 
+(/usr/share/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -549,22 +553,22 @@ File: lstlang3.sty 2015/06/04 1.6 listings language file
 LaTeX Warning: Unused global option(s):
     [pdflatex,11pt].
 
-(./praca.aux (./chapters/rozdzial1.aux) (./chapters/rozdzial2.aux))
+(./praca.aux (./chapters/rozdzial1.aux) (./chapters/rozdzial3.aux))
 \openout1 = `praca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 109.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -681,6 +685,10 @@ Underfull \vbox (badness 7981) has occurred while \output is active []
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `cha:pierwszyDokument' on page 2 undefined on input li
+ne 35.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -688,48 +696,46 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 35.
 
-
 LaTeX Warning: Citation `Alvis2011' on page 2 undefined on input line 35.
 
 ) [2]
-\openout2 = `chapters/rozdzial2.aux'.
+\openout2 = `chapters/rozdzial3.aux'.
 
- (./chapters/rozdzial2.tex
+ (./chapters/rozdzial3.tex
 Rozdzia\l  2.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 36.
-(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) [3
 
 
 
-] [4]) [5]
+]) [4]
 No file praca.bbl.
-[6
-
-] (./praca.aux (./chapters/rozdzial1.aux) (./chapters/rozdzial2.aux))
+(./praca.aux (./chapters/rozdzial1.aux) (./chapters/rozdzial3.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5667 strings out of 493013
- 73486 string characters out of 6139316
- 169827 words of memory out of 5000000
- 9088 multiletter control sequences out of 15000+600000
- 34501 words of font info for 45 fonts, out of 8000000 for 9000
+ 5899 strings out of 493013
+ 76096 string characters out of 6139316
+ 179313 words of memory out of 5000000
+ 9316 multiletter control sequences out of 15000+600000
+ 37340 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,45p,1271b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,11n,45p,1271b,1860s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/c
-ourier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
-/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on praca.pdf (6 pages, 83943 bytes).
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/txfonts/t1xbtt.pfb></usr/share/texmf-dist/fonts/type1/public/txfonts/t1xtt.pf
+b></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on praca.pdf (4 pages, 74338 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 46 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

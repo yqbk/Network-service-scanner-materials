@@ -57,21 +57,26 @@ def parse_args():
 #scanning for open ports using system sockets
 def tcp_connect(ip, ports):
     #create a socket
+    try:
+        #AF_INET -> Internet Protocol v4 addresses, STREAMing socket
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    except socket.error,err_msg:
+      print 'Cannot create a socket'
+      sys.exit()
 
     #checking ports
     for port in ports:
         try:
             #try to connect, if success port is opened
-            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             result = s.connect_ex((ip,port))
             if result == 0:
                 print 'port ' + str(port) + ' open'
                 pass
             #close scoket and prepare new one
             s.close()
-        except socket.error,err_msg:
-          print 'Cannot create a socket'
-          sys.exit()
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        except socket.error:
+            pass
 
 #--------------------------------------------
 #---------------TCP_SYN----------------------
