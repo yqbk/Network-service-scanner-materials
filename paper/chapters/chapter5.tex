@@ -1,6 +1,135 @@
 \chapter{Skanowanie sieci}
 \label{cha:scan}
 
+%Scanning – this is a different level of reconnaissance. Before you start determining your attack strategy, you need to know what your targets are. This will provide you with a lot of information about systems and ports as well as, potentially, any firewalls that may be in place. This is also where you may need to exercise caution, depending on what level of testing you are performing. This can be a very noisy step, since you are starting to engage directly with the target here. It may be useful for the client to see if they can detect the scanning as part of shoring up their defensive stance.
+
+%The function of port scanning tool is sequencing all the service port of openness network in the network service host. After that, utilize the relative port security leak to protect the network host. [2] The port scanning tool is the security software to reduce the security-hidden danger that can search the openness port of host. Moreover, it is also can find out the security leak, and apply the hacker attack.
+
+Skan sieci \cite{Cheng2011} jest czynnością podstawową dla uzyskiwania informacji o aktualnym stanie systemu komputerowego lub sieci. Co za tym idziem, jest stosowany jako pierwszy, podstawowy krok potencjalnych napastników względem wybranych przez nich celów. W pewnych okolicznościach skan uważany jest także za atak sam w sobie. 
+
+Jednakże może one też służyć słusznym celom, takim jak na przykład sprawdzanie konfiguracji systemów, koregowanie reguł bezpieczeństwa czy monitorowanie wielko-skalowych środowisk sieciowych. W tym sensie/pod tym względem, skanowanie jest efektywną metodą przy sprawdzaniu środków bezpieczeństwa sieci/kontroli
+
+W rozdziale tym przedstawione zostaną podstawowe typy skanerów, ich charakterystyki jak również różnice między nimi
+
+\section{Na czym polega scanning?}
+
+Bez wcześniejszego zeskanowania danej sieci hakerzy nie posiadają wystarczających informacji na ich temat i w większosci wypadków nie są w stanie przejść do kolejnego etapu ich strategi ataku.
+
+Najbardziej skomplikwane scenariusze są praktycznie niemożliwe do wykonania bez wcześnieszego dokładnego zbadania sieci będącej celem ataku. Z innej strony, techniki skanowania sieci zostały zaadaptowane w dziedzinie bezpieczeństwa IT i służą do wykrywania słabości i wad danego systemu lub sieci.
+
+W wyniku ciągłego rozowju branży IT infrastruktury sieciowe stają się coraz bardziej skomplikowane. W tej persepktywie skaning jawi się jako efektywne narzędzie do kontroli i badania tak złożonych systemów. Wraz ze wzostem wymagań ze strony zarówno osób atakująych jak i osób odpowiedzialnych za bezpieczeństwo, w ostatnich latach doszło do szybkiego rozwoju dziedziny metod i technik skanowania.
+
+Liczne metody skanowania odróżniają od siebie ich kompetencje (w funkcjonalności?), a co za tym idzie, skutkują różnymi rodzajami implementacji. Ich wyniki są zazwyczaj odmienne i nie machine-readable. Łącząc kilka typów skanerów można *jednak) uzyskać gruntowne lecz jednocześnie łatwe w interpretacji wyniki.
 
 
-\section{}
+\section{attack graph}
+
+Attack Graphs have been proposed for years as a formal way to simplify the modeling of complex attacking scenarios [9]. An attack graph describes not only one possible attack, but also many potential ways for an attacker to reach a goal. the workflow of an attack graph construction tool consists of three in- dependent phases: Information Gathering, Attack Graph Construction, as well as Visualization and Analysis.
+
+\section{Przegląd metod skanowania sieci}
+
+Techniki skanowania sieci klasyfikuje się w następujący sposób (kategorie):
+\begin{enumerate}
+	\item pasywne - brak wysyłania jakichkolwiek pakietów,
+	\item wyszukujące (discovery) - pakiety wysyłane są wyłącznie w celu odnalezienia hostów i wykryciu łączności,
+	\item skan portów - systematyczne sprawdzenie indywidualych portów lub ich przedziałów. Pakiety z odpowiedzią mogą być sprawdzone względem posiadania software banners,
+	\item probing - wykryte serwisy sieciowe sprawdzane są pod kątem wersji i słabości/podatności(vulnerabilities),
+	\item exploiting - wykryte luki są aktywnie wykorzystywane lub sprawdzane,
+	\item inne - aktywne, jednak nie mogą być zakwalifikowane do żadnej z poprzednich kategorii.
+\end{enumerate}
+
+Większość z emerged technik skanu są zaimplementowane na podstawie przedstawionej powyżej klasyfikacji. W praktyce obejmuje to:
+\begin{enumerate}
+	\item skaner topologii - użyty do sprawdzania struktury sieci składającej się na wykrycie hostów, maski sieciowej i bramek sieciowych (gateways). W przypadku zaawansowanych skanerów, liczne sieci są skanowane aby w rezultacie przedstawić jednorodny, kompletny diagram sieci do sprawdzenia ich wzajemych połączeń. 
+	%The participants in a local network can be obtained by broadcasting ping or ARP -request packets. For remote hosts, ordinary ping over a large address range can be performed. Popular implementations include traceroute 7 , Nessus 8 , etc.
+	\item skaner portów sieciowych - 
+	\item skaner "odcisu palca" (Fingerprint Scanner) - 
+	\item skaner podatności (Vulnerability Scanner)
+	\item skaner przyrostowy (Incremental Scanner) - 
+	\item
+\end{enumerate}
+
+% Port Scanner aims at finding open and filtered ports on a specified target host. There have been implemented a variety of such scan methods, e.g., Nmap, Nessus, netcat, etc. Most of them are targeted for TCP ports. The easiest and also the most obvious is a connect scan. Stealthier methods are syn or ack scans. UDP scans are used for UDP-based ports. 
+
+%Fingerprint Scanner is to find the name and version of the software or oper- ating system running on the target. The primary method to obtain product information from a service is via banner grabbing. Advanced tools examine the specifics of sent packets and the behavior the network stack. Known examples are amap, P0f, XProbe, etc. 
+
+%Vulnerability Scanner targets at detecting vulnerabilities of services or the operating systems running on a host. Vulnerabilities are usually found by ac- tually trying to exploit a set of possible vulnerabilities. Less aggressive tools infer possible vulnerabilities from the products determined by fingerprinting. Existing vulnerability scanners include Nessus, X-Scan, Nmap, etc. 
+
+%Incremental Scanner usually scans the surrounding network topology by first performing a scan from any of the previously mentioned categories and gain access to vulnerable hosts with exploits. Having access to further hosts, al- ready found networks can be scanned from another viewpoint or completely new networks may become accessible. Doing this incrementally, it sometimes enables the mapping of DMZs (demilitarized zones) between a public and private network or even internal private network. Typical methods to ac- complish incremental scanning is to exploit a vulnerability on a host and inject scanning code into the vulnerable service. Some common approaches are syscall proxying[1] and SNAPP [10], Core Impact[1], etc.
+
+
+\section{Protokół TCP}
+
+W sieci komputerowej każdy host jest niejako zamkniętą przestrzenią. Sposobem na komunikację z innymi maszynami w sieci jest port. W modelu OSI[przypis] port przynależy do warstwy transportowej. Warstwa ta identyfikuje każdy serwis działający na urządzeniu poprzez jeden ustalony numer portu, będący 16-bitowym adresem. Rozróżnia się dwa typy adresów portów \cite{Liang2013}:
+\begin{enumerate}
+\item numery uniwersalne - będące rozdzielone pomiędzy serwisy sieciowe przez organizację ICAAN[link], posiadajce wartości z zakresu 0 do 1023,
+\item numery zwykłe (ordinary port number) - w sposób losowy mogą być przydzielane pomiędzy procesy klienckie (can random distribute the customer process to the requested service)
+\end{enumerate}
+
+%The scanning port target is exploring the openness service port of the target host. The other one is adjust the operation system based on the openness service and other network information
+
+
+W warstwie transportowej znajdują się dwa istotne protokoły transmisji danych:
+\begin{enumerate}
+\item transmission control protocol (TCP)
+\item user Datagram Protocol (UDP)
+\end{enumerate}
+
+Podstawa działania skanera portów jest bardzo prosta. Narzędzie to próbuje nawiązać połączenie TCP lub UDP za pomocą tak zwanego gniazda (socket) będącego parą portu o danym numerze oraz adresu IP. Na podstawie odpowiedzi hosta na przesłany sygnał (lub jej braku) można stwierdzić, czy dany port jest otwarty, a co za tym idzie, czy dany serwis sieciowy do niego "podpięty" działa na danej maszynie.
+
+
+
+
+% The target of port scanning has four:
+% 1) Explore the openness port of target host;
+% 2) Judge the operation system of target host (Windows, Linux or UNIX etc);
+% 3) Identify the special application program or service edition number;
+% 4) Explore the system leak of target host.
+
+
+\subsection{Budowa TCP/IP}
+
+Adres IP hosta wraz z numerem portu tworzą parę będącą gniazdem (socket) dla połącznia z inną maszyną w sieci. Aby uzyskać dostęp do serwisu sieciowego za pomocą protokołu TCP, połaczenie musi być explicitly ustanowione pomiędzy gniazdem na maszynie wysyłajacej oraz maszynie odbierającje. Dzięki temu połączenia TCP są identyfikowane bezpośrednio za pomocą ich dwóch punktów końcowych (gniazda na obydwu maszynach). Między punktami końcowymi dochodzi do wymiany danych za pomocą segmentów \cite{vivio2002}.
+
+Segment TCP składa się z obowiązkowego nagłówka oraz opcjonalnych danych. Nagłówek natomiast zawiera w sobie sześć bitów flag z których jeden lub więcej może być zwróconych? w tym samym czasie [1,2]:
+\begin{itemize}
+\item SYN - synchronizuje numery sekwencji aby zainicjować połaczenie,
+\item FIN - nadawca zakończył przesyłanie danych,
+\item RST - zresetuj połączenie,
+\item URG - informuje o istotności pola "priorytet",
+\item ACK - informuje o istotności pola "Numer potwierdzenia"
+\item PSH - odbiorca wymaga natychmiastowego przesłania danych,
+
+\item NS – (ang. Nonce Sum) jednobitowa suma wartości flag ECN (ECN Echo, Congestion Window Reduced, Nonce Sum) weryfikująca ich integralność
+\item CWR – (ang. Congestion Window Reduced) flaga potwierdzająca odebranie powiadomienia przez nadawcę, umożliwia odbiorcy zaprzestanie wysyłania echa.
+\item ECE – (ang. ECN-Echo) flaga ustawiana przez odbiorcę w momencie otrzymania pakietu z ustawioną flagą CE
+
+\end{itemize}  
+
+\subsection{Nawiązywanie połączenia TCP}
+
+Protoków TCP jest zorientowanym połączeniowo, niezawodnym, (strumieniowym) protokołem komunikacyjnym. Zorientowanie połączeniowo oznacza, że dwie aplikacje użuwające TCP muszą ustanowić wzajemne połączenie TCP przed wymianą danych. Niezawodność zapewniona jest poprzez użycie sum kontrolnych, liczników, sekewncjonowania danych i potwierdzeń. Dzięki przypisywaniu numerów sekwencji do każdego przesyłanego bajtu oraz wymaganiu potwierdzenia po otrzymaniu, TCP gwarantuje niezawodność w dostarczaniu danych.. Numery sekwencji używane są do zapewnienia właściwego porządku (otrzymywanych) danych oraz do wyelimnowania zduplikowanych danych. Zazwyczaj w sesji TCP działają (jednocześnie) strumienie danych (każdy punkt końcowy otrzymuje oraz przesyła dane). W związku z tym inicjacyjne numery sekwencji (?) musza być przydzielone do każdego strumienia kiedy połączenie jest ustanawiane.\
+
+<conn establish process>>
+
+% https://tools.ietf.org/html/rfc793#page-15
+
+\subsubsection{Szczegóły implementacyjne TCP}
+
+Większość implementacji TCP/IP stosuje (się) następujące zasady:
+\begin{itemize}
+\item kiedy odbierany jest segment SYN (lub FIN) dla zakmniętego portu (i.e., for which no TCB exists), TCP odrzuca segment i odpowiada nadawcy segmentem RST,
+\item kiedy segment RST dostarczany jest do portu nasłuchującego, jest po prostu odrzucany,
+\item kiedy segment RST dostarczany jest do portu zamkniętego, jest (po prostu) odrzucany,
+\item kiedy segment zawierający flagę ACK jest dostarczany do portu nasłuchującego, TCP odrzuca segment i odpowiada nadawcy segmentem RST,
+\item kiedy segment z "wyłączoną" flagą SYN jest dostarczany do portu nasłuchującego, the normal three.way handshake continues by replying SYN/ACK,
+\item When a FIN segment arrives for a listening port, it is simply dropped. "FIN behavior" (closed port = RST, listening port = dropped) can also be seen with the PSH and URG flags, with a TCP segment with no flags, and with all the combinations of FINIPSHIURG [5].
+\end{itemize}
+
+
+
+
+% [1] W.R. Stevens, TCP/IP Illustrated,
+% Vol. 1. Addison-Wesley, 1994.
+% [2] W.R. Stevens, TCP/IP Blustrated,
+% Vol. 2. Addison-Wesley, 1995.
