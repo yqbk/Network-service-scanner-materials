@@ -1,110 +1,110 @@
 \chapter{State of the art}
 
 
-nmap 1 , amap 2 , netcat 3 , P0f 4 , XProbe 5 , X-Scan 6 , etc.
+% nmap 1 , amap 2 , netcat 3 , P0f 4 , XProbe 5 , X-Scan 6 , etc.
 
 
-\section{Network Enumeration}
+% \section{Network Enumeration}
 
-\subsection{WS_PingProPaek}
+% \subsection{WS_PingProPaek}
 
-WS_PingProPack wroks as an excellent starting point for any penetra-
-tion test. It has a very user friendly GUI to obtain information on host names and IP
-addresses of the target network. It provides whois, finger, ping, DNS, and SNMP
-information. Additionally WS_PingProPack can be used to search information
-(such as user's full names and e-mail addresses) available through LDAP and
-quickly ping an IP address range or host name.
-
-
-\subsection{Sam Spade}
-
-Sam Spade helps with the discovery phase of penetration testing. Sam
-Spade provides much of the same functionality as WS_Ping Pro-Pack and can per-
-form whois queries, pings, DNS Dig (advanced DNS request), traceroute, finger,
-zone transfers, SMTP mail relay checking and Web site crawling and mirroring.
-
-\subsection{Rhino9 Pinger}
-
-After obtainning DNS information about an organisation such as do-
-main names and IP blocks, Pinger is used to find active hosts or targets on the tar-
-get network without being detected. It pings the targets using ICMP ECHO re-
-quests and reply. The pinger sends and ICMP ECHO request and the target sends
-back an ECHO reply.
-
-\subsection{NetScanTool Pro}
-
-NetScanTool Pro is a software package with multiple solutions for
-network information discovery, gathering and security testing. It is broadly used
-in network security/administration, Internet forensics and law enforcement.
-
-%-----------------------------------
-\section{Vulnerability Analysis}
-
-\subsection{7th Sphere Port Scanner}
-
-7th Sphere is an excellent tool for scanning a range of ports on a sin-
-gle host and performing banner grabbing. This information offers vital information
-about the target and the services running on it.
-
-\subsection{SuperScan}
-
-Superscan is a fast and powerful connect-based TCP port scanner,
-pinger and hostname resolver. It can connect to any discovered open port using
-user-specified "helper" applications (e.g. Telnet, Web browser, FTP) and assign a
-custom helper application to any port.
-
-\subsection{Nmap}
-
-Nmap is considered to be the premier port scanner available as well as
-a reliable OS identification tool, it also serve as a ping sweep utility.
+% WS_PingProPack wroks as an excellent starting point for any penetra-
+% tion test. It has a very user friendly GUI to obtain information on host names and IP
+% addresses of the target network. It provides whois, finger, ping, DNS, and SNMP
+% information. Additionally WS_PingProPack can be used to search information
+% (such as user's full names and e-mail addresses) available through LDAP and
+% quickly ping an IP address range or host name.
 
 
-\subsection{Netcat}
+% \subsection{Sam Spade}
 
-Netcat is a feature-rich network debugging and exploration tool by
-creating almost any kind of connection using the TCP/IP protocol. It enables user
-to telnet or obtain command line access on different ports, to create back doors, or
-to bypass packet-filtering devices.
+% Sam Spade helps with the discovery phase of penetration testing. Sam
+% Spade provides much of the same functionality as WS_Ping Pro-Pack and can per-
+% form whois queries, pings, DNS Dig (advanced DNS request), traceroute, finger,
+% zone transfers, SMTP mail relay checking and Web site crawling and mirroring.
 
-\subsection{What's Running}
+% \subsection{Rhino9 Pinger}
 
-What's running is a banner grabbing program. Once the services run-
-ning on a target host have been identified via port scanning, this program can be
-used to investigate a server to see what HTTP/FTP/POP3/SMTP/NNTP software
-version runs on it. Thus it is easy to understand the associated vulnerabilities.
+% After obtainning DNS information about an organisation such as do-
+% main names and IP blocks, Pinger is used to find active hosts or targets on the tar-
+% get network without being detected. It pings the targets using ICMP ECHO re-
+% quests and reply. The pinger sends and ICMP ECHO request and the target sends
+% back an ECHO reply.
+
+% \subsection{NetScanTool Pro}
+
+% NetScanTool Pro is a software package with multiple solutions for
+% network information discovery, gathering and security testing. It is broadly used
+% in network security/administration, Internet forensics and law enforcement.
+
+% %-----------------------------------
+% \section{Vulnerability Analysis}
+
+% \subsection{7th Sphere Port Scanner}
+
+% 7th Sphere is an excellent tool for scanning a range of ports on a sin-
+% gle host and performing banner grabbing. This information offers vital information
+% about the target and the services running on it.
+
+% \subsection{SuperScan}
+
+% Superscan is a fast and powerful connect-based TCP port scanner,
+% pinger and hostname resolver. It can connect to any discovered open port using
+% user-specified "helper" applications (e.g. Telnet, Web browser, FTP) and assign a
+% custom helper application to any port.
+
+% \subsection{Nmap}
+
+% Nmap is considered to be the premier port scanner available as well as
+% a reliable OS identification tool, it also serve as a ping sweep utility.
+
+
+% \subsection{Netcat}
+
+% Netcat is a feature-rich network debugging and exploration tool by
+% creating almost any kind of connection using the TCP/IP protocol. It enables user
+% to telnet or obtain command line access on different ports, to create back doors, or
+% to bypass packet-filtering devices.
+
+% \subsection{What's Running}
+
+% What's running is a banner grabbing program. Once the services run-
+% ning on a target host have been identified via port scanning, this program can be
+% used to investigate a server to see what HTTP/FTP/POP3/SMTP/NNTP software
+% version runs on it. Thus it is easy to understand the associated vulnerabilities.
 
 
 
 
-%-----------------------------------
-\subsection{Ethereal}
+% %-----------------------------------
+% \subsection{Ethereal}
 
-Ethereal is a network traffic analyser/sniffer for Unix-like operating
-systems. It uses GTK+, a graphical user interface library, and libpcap, a packet cap-
-ture and filtering library.
+% Ethereal is a network traffic analyser/sniffer for Unix-like operating
+% systems. It uses GTK+, a graphical user interface library, and libpcap, a packet cap-
+% ture and filtering library.
 
-\subsection{Nassus}
+% \subsection{Nassus}
 
-Nessus is a remote network security auditor that tests security modules
-in an attempt to discover vulnerabilities. It is made up of two parts: a server, and a
-client. The server/daemon, nessusd, is responsible for the attacks, whereas the cli-
-ent, nessus, interferes with the user through nice X11/GTK+ interface.
+% Nessus is a remote network security auditor that tests security modules
+% in an attempt to discover vulnerabilities. It is made up of two parts: a server, and a
+% client. The server/daemon, nessusd, is responsible for the attacks, whereas the cli-
+% ent, nessus, interferes with the user through nice X11/GTK+ interface.
 
-\subsection{Hping2}
+% \subsection{Hping2}
 
-Hping2 is a network tool that can send custom ICMP/UDP/TCP pack-
-ets and display target replies like ping does with ICMP replies. It can be used to
-test firewall rules, perform spoofed port scanning, test net performance using dif-
-ferent protocols, packet size, TOS (type of service), and fragmentation, do path
-MTU discovery, transfer files, trace route, fingerprint remote OSs, audit a TCP/IP
-stack, etc.
+% Hping2 is a network tool that can send custom ICMP/UDP/TCP pack-
+% ets and display target replies like ping does with ICMP replies. It can be used to
+% test firewall rules, perform spoofed port scanning, test net performance using dif-
+% ferent protocols, packet size, TOS (type of service), and fragmentation, do path
+% MTU discovery, transfer files, trace route, fingerprint remote OSs, audit a TCP/IP
+% stack, etc.
 
 
-\subsection{Pierwsze próby wytworzenia prostego skanera za pomocą jęzkua python 2.7 i biblioteki pylibcap}
+% \subsection{Pierwsze próby wytworzenia prostego skanera za pomocą jęzkua python 2.7 i biblioteki pylibcap}
 
-\section{nmap}
+% \section{nmap}
 
-\section{kali}
+% \section{kali}
 
 
 

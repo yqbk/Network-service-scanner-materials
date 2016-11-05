@@ -112,6 +112,12 @@ Protoków TCP jest zorientowanym połączeniowo, niezawodnym, (strumieniowym) pr
 
 <conn establish process>>
 
+\begin{enumerate}
+%todo
+\item A wysyła wiadomość TCP (tak zwany SYN request) do B z ustawioną specjalną flagą SYN (SYNchronize - synchronizuj numery sekwencji). Zapytanie SYN ustala numer portu na serwerze do którego klient chce się połączyć oraz ISN klienta (w tym wypadku XX jest przykładem),
+\item serwer odpowiada swoją własną wiadomością SYN 
+\end{enumerate}
+
 % https://tools.ietf.org/html/rfc793#page-15
 
 \subsubsection{Szczegóły implementacyjne TCP}
@@ -133,3 +139,29 @@ Większość implementacji TCP/IP stosuje (się) następujące zasady:
 % Vol. 1. Addison-Wesley, 1994.
 % [2] W.R. Stevens, TCP/IP Blustrated,
 % Vol. 2. Addison-Wesley, 1995.
+
+
+\section{Metody skanu}
+
+\subsection{Pełne połączenie TCP}
+
+Przez długi okres czasu metoda ta była fundamentalną formą skanowania za pomocą protokołu TCP. Skanowany host stara się ustanowić regularne połączenie (na przykład? używając pełnej procedury three-way handshake) z wybranymi portami na maszynie będącej celem. Połączenia rozpoczynane są poprzez system call connect[6]. Dla każdego nasłucującego portu, connect() zakończy się sukcesem a w innym wypadku zwróci -1 wskazując na to, że dany port jest nieosiągalny. Metoda ta jest prosta w implementacji, ponieważ do funkcji? connect() mają dostęp wszyscy użytkownicy (nie są wymagane dodatkowe privelages).
+Wadą tego sposobu jest to, że jest on łatwy do wykrycia ponieważ logi systemowe będą wskazywały gwałtowny przyrost liczby połączeń i błędów. 
+
+%Monitoring programs like Courtney, Gabriel, and TCP Wrappers [7] are usually employed for detec- tion. Besides, since wrappers also provide some control over incoming requests, they can be used to (try to) prevent full connection scanning originating from known
+
+% [6] D. Comer, Internetworking with TCP/IP
+% Vol. 3, Second Edition. Prentice Hall, 1996.
+
+\subsection{Skanowanie za pomocą TCP SYN}
+
+W technice tej skanowany host dokonuje ekwiwalentu do tak zwanego "active open" poprzez wysłanie segmentu SYN? do wybranego portu na maszynie będącej celem. Jeżeli w odpowiedzi otrzyma RST, %is a RST then the port is closed and, if scheduled, a different port is probed
+wtedy port jest zamknięty. Jeśli natomiast odpowiedzią będzie SYN/ACK, oznacza to, że badany port rzeczywiscie nasłuchuje. Jako, że jedynie informacja o stanie portu jest istotna, połączenie jest przerywane poprzez wysłanie RST aby zakończyć połączenie.
+
+Zauważyć należy, żę w metodzie tej nie nawiązywane jest pełne połączenie ze zdalnym hostem, z tego względu często nazwyana jest "half-open" scanning.
+
+Niewątpliwą zaletą tej metody jest fakt, że nawet jeśli może ona być wykryta przez niekture loggery (na przykład tcplogger), połączenia SYN są rejestrowane z mniejszą częstotliwością niż połączenia kompletne.
+
+Wadą tego podejścia jest to, że często należy samemu zbudować wymagany pakiet IP z flagą SYN i dodatkowo upoważnienie administratora jest wymagame, aby taki pakiet samodzielnie zbudować. 
+
+%Both options (SYN and full connection scanning) as well as almost all the techniques discussed in this paper are implemented in nmap [9], a very powerful and comprehensive TCP port scann
