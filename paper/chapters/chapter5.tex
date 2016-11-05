@@ -165,3 +165,24 @@ Niewątpliwą zaletą tej metody jest fakt, że nawet jeśli może ona być wykr
 Wadą tego podejścia jest to, że często należy samemu zbudować wymagany pakiet IP z flagą SYN i dodatkowo upoważnienie administratora jest wymagame, aby taki pakiet samodzielnie zbudować. 
 
 %Both options (SYN and full connection scanning) as well as almost all the techniques discussed in this paper are implemented in nmap [9], a very powerful and comprehensive TCP port scann
+
+\subsection{Niewykrywalne (stealth) skanowanie portów za pomocą metod FIN, Xmas Tree oraz Null}
+
+Po raz pierwszy stealth scanning zaprezentowane zostało w publikacji \cite{}
+
+%Uriel Maimon, Port Scanning without the SYN flag, TCP port Stealth Scanning. Phrack Magazine, Issue 49, 1996.
+
+Główną zaletą tego podejścia jest fakt, że nie wykorzystuje ono zwykłego three-way handshake do nawiązywania połaćzenia TCP jest więc znacznie trudniejsze do wykrycia za pomocą logów i przez to bardziej dyskretny niż zwykły SYN scan. Ponadto segmenty FIN mogą zostać przepuszczone przez filter pakietów (taki jak wireshark) wychwytującego jedynie pakiety SYN.
+
+"Niewidzialne" skanowanie używa segmentów FIN do sondowania portów. Jak zostało wyjaśnione w sekcji 1 [section], gdy segment FIN dostarczony zostaje do zamkniętego portu, odrzuca on segment i odsyła segment RST w odpowiedzi. W przypadku, gdy segment dociera do portu nasłuchującego, jest on jedynie odrzucany a żadna odpowiedź nie jest przysyłana do nadawcy.
+
+
+Metody Xmas Tree oraz Null są wariacjami na temat techniki używającej segmenty FIN \cite{} [9]. Różnią się natomiast tym, że w celu sondowania portu przesyłają segmenty PSH oraz URG, metoda działania pozostaje jednak taka sama i opiera się na mechanizmie działania metody FIN scan (odpowiedź z flagą RST w przypadku zamkniętego portu lub odrzucenie pakietu gdy port nasłuchuje). 
+
+Skan Xmas Tree ustawia jednocześnie flagi FIN, URG oraz PUSH. Null skan natomiast przesyła pakiet bez żadnych ustawionych flag. Kombinacje te zaprojektowane zostały aby ukniknąć zostania wykrytym przez niektóre filtry, jak na przykład tak zwane "detektory FIN FLAG".
+
+%NMAP, http://www.insecure.org/nmap/index.html, 1999.
+
+Warto nadmienić, że metoda ta działa wyłącznie z niekórymi systemami operacyjnymi. Na te metodę podatna jest większość systemów z rodziny UNIX, hosty używające systemów z rodziny Windows są na nią odporne, ponieważ przesyłają one segment RST niezależnie od tego, czy port był otwarty czy zamknięty.
+
+W metodzie tej również należy stworzyć niestandarowy segment TCP.
